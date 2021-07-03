@@ -6,7 +6,7 @@ export class QuestionBase<T> {
     order: number;
     controlType: string;
     type: string;
-    options: {key : string , value: string , label?: string}[];
+    options: {key : string , value: string }[];
 
     constructor(
         fields: {
@@ -17,7 +17,7 @@ export class QuestionBase<T> {
             order?: number;
             controlType?: string;
             type?: string;
-            options?: {key : string , value: string , label?: string}[];
+            options?: {key : string , value: string }[];
     }) {
             this.value = fields.value;
             this.key = fields.key || '';

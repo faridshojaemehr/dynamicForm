@@ -23,7 +23,7 @@ export class QuestionService {
             new QuestionTextBox({
                 key: 'firstName',
                 label: 'First Name',
-                value: 'Oc',
+                value: 'Farid',
                 required: true,
                 order: 1
             }),
@@ -32,7 +32,7 @@ export class QuestionService {
             new QuestionTextBox({
                 key: 'lastName',
                 label: 'Last Name',
-                value: 'Dev',
+                value: 'Shojaemehr',
                 required: true,
                 order: 2
             }),
@@ -40,6 +40,7 @@ export class QuestionService {
             new QuestionTextBox({
                 key:  'email',
                 label: 'Email',
+                value: '@gmail.com',
                 type: 'email',
                 order: 4
             }),
