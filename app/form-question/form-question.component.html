@@ -8,7 +8,11 @@
             <select  *ngSwitchCase="'dropdown'" class="form-control  mt-2" [formControlName]="question.key">
                     <option *ngFor="let option of question.options" class="form-control" [value]="option.value">{{option.value}}</option>
             </select>
-        </div>
+
+            <!-- <div class="form-check" *ngFor="let option of question.options">
+                <input class="form-check-input"  *ngSwitchCase="'checkbox'" [value]="option.value">
+                <label class="form-check-label" > {{ option.value }} </label>
+            </div> -->
     </div>
 
 </div>
