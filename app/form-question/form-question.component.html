@@ -1,10 +1,14 @@
-<div class="container" [formGroup]="form">
-    <label [attr.for]="question.key">{{question.label}}</label>
-    <div [ngSwitch]="question.controlType">
-        <input *ngSwitchCase="'textbox'" [formControlName]="question.key" [id]="question.key" [type]="question.type">
-        
-        <select *ngSwitchCase="'dropdown'" [formControlName]="question.key">
-                <option *ngFor="let option of question.options" [value]="option.value">{{option.value}}</option>
-        </select>
+<div class="container">
+ 
+    <div class="form-row" [formGroup]="form">
+        <label class="mt-3" [attr.for]="question.key">{{question.label }}   :</label>
+        <div [ngSwitch]="question.controlType">
+            <input  *ngSwitchCase="'textbox'" class="form-control mt-2"  [formControlName]="question.key" [id]="question.key" [type]="question.type">
+            
+            <select  *ngSwitchCase="'dropdown'" class="form-control  mt-2" [formControlName]="question.key">
+                    <option *ngFor="let option of question.options" class="form-control" [value]="option.value">{{option.value}}</option>
+            </select>
+        </div>
     </div>
+
 </div>

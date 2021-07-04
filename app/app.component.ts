@@ -17,7 +17,7 @@ export class AppComponent {
   @ViewChild('template') template: FormComponent
 
   questions$: Observable<QuestionBase<string>[]>;
-  questions2$: Observable<QuestionBase<any>[]>;
+  questions2$: Observable<QuestionBase<string>[]>;
 
   constructor(private service: QuestionService) {
     this.questions$ = service.getPersonalInfoFields();
@@ -27,5 +27,7 @@ export class AppComponent {
   onSubmit() {
     this.template.onSubmit();
     this.payload = this.template.payload;
+    console.log(this.payload);
+    
   }
 }

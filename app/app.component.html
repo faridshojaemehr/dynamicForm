@@ -1,19 +1,28 @@
 <div class="container">
-  <h4 class="center">Dynamic Form</h4>
-  <div>
-    <!-- personal info -->
-    <app-form #template [questions]=" questions$ | async">
-      <p class="title">Personal Information</p>
-    </app-form>
+  <div class="row">
+    <div class="col-12">
+      <h3>Dynamic Form</h3>
+      <hr>
+    
+      <div >
+        <!-- personal info -->
+        <app-form  #template [questions]=" questions$ | async">
+          <h5>Personal Information</h5>
+        </app-form>
+      </div>
+   
+      <hr>
+    <div class="">
+      <!-- education -->
+      <app-form #template [questions]=" questions2$ | async">
+        <h5>Education</h5>
+      </app-form>
+    </div>
+    <hr>
+    <div>
+      <button class="btn btn-primary  mt-2" style="float: right;" (click)="onSubmit()">Submit</button>
+    </div>
 
-    <!-- education -->
-    <app-form [questions]=" questions2$ | async">
-      <p class="title">Education</p>
-    </app-form>
   </div>
-
-
-  <div class="container">
-    <button (click)="onSubmit()">Submit</button>
   </div>
 </div>
